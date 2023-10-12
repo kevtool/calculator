@@ -68,7 +68,7 @@ function Calculator(props) {
         argStr = argStr.map((str) => str).join('');
         console.log(argStr)
 
-        fetch("http://kevtool.pythonanywhere.com/calculate?str=" + argStr, {
+        fetch("https://kevtool.pythonanywhere.com/calculate?str=" + argStr, {
             method: "GET",
         }).then((res) =>
             res.json().then((data) => {
