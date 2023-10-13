@@ -70,6 +70,10 @@ function Calculator(props) {
 
         fetch("https://kevtool.pythonanywhere.com/calculate?str=" + argStr, {
             method: "GET",
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            }
         }).then((res) =>
             res.json().then((data) => {
                 setDisplayStr(data.result);
